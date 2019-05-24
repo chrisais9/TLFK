@@ -45,6 +45,7 @@ def LightInfo(request):
     x = request.GET['x']
     y = request.GET['y']
     di = request.GET['di']
+    time = request.GET['time']
     #CrossWalkId = request.GET['CrossWalkId']
     direction = find_direction(int(di))
 
@@ -73,4 +74,10 @@ def LightInfo(request):
             start_t=i.time_start
             end_t=i.time_end
 
-    return JsonResponse([{'X': x}, {'Y': y}, {'start_time': start_t},{'end_time': end_t}], safe=False)
+    msg = ""
+    if start_t <= (time%100) <= end_t :
+        msg="green"
+    else:
+        msg="red"
+
+    return JsonResponse([{'X': x}, {'Y': y},{'msg':msg}], safe=False)
