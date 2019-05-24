@@ -20,6 +20,7 @@ class Block:
         for d in self.direction_list:
             if(d[1]==direction):
                 return d[0]
+        return -1
 
 class CrossWalk:
     def __init__(self,start_id,end_id,time_start,time_end):
@@ -65,19 +66,22 @@ def LightInfo(request):
         if(j.in_block(int(x),int(y))):
             current_block = i
 
+    
     next_block = BlockList[current_block].go_where(direction)
     
-    start_t=0
-    end_t=0
+    start_t=-1
+    end_t=-1
     for i in CrossWalkList:
         if(i.start_id==current_block and i.end_id == next_block) or (i.start_id==next_block and i.end_id == current_block):
             start_t=i.time_start
             end_t=i.time_end
 
     msg = ""
+    left_time=987654321
     if start_t <= (int(time)%100) <= end_t :
         msg="green"
+        left_time=end_t-(int(time)%100)
     else:
         msg="red"
-
-    return JsonResponse([{'X': x}, {'Y': y},{'msg':msg}], safe=False)
+    
+    return JsonResponse([{'X': x}, {'Y': y},{'msg':msg},{'start_t':start_t},{'end_t':end_t}], safe=False)
