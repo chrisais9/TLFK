@@ -5,8 +5,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface RetrofitService {
-    public static final String baseURL = "http://127.0.0.1:8000/";
 
+    public static final String baseURL = "http://10.30.117.53:8000/";
     @GET("LightInfo/")
     Call<LightInfoResponse> LightInfo(
             @Query("x") int x,

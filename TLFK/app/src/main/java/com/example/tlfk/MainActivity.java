@@ -1,12 +1,7 @@
 package com.example.tlfk;
 
 import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +12,7 @@ import io.nlopez.smartlocation.SmartLocation;
 import io.nlopez.smartlocation.location.config.LocationParams;
 import io.nlopez.smartlocation.location.utils.LocationState;
 import pub.devrel.easypermissions.EasyPermissions;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         requestLocationPermission();
 
-        // Get loocation
+        // Get location
         getUserLocation();
 
     }
-
+    //Get user Longitude , Latitude
     private void getUserLocation() {
         LocationState locationState = SmartLocation.with(this).location().state();
         // Check if the location services are enabled
@@ -46,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("Locations long", ""+ location.getLongitude());
 
                     Toast.makeText(MainActivity.this, "Lat : " + location.getLatitude() + " Long : " + location.getLongitude(), Toast.LENGTH_SHORT).show();
-                    dataRequest
+                    int x = (int)location.getLatitude();
+                    int y = (int)location.getLongitude();
+                    CoordinateActivity coordinateActivity = new CoordinateActivity();
+                    coordinateActivity.dataRequest(x/10,y/10,150,30);
                 }
             });
         } else {
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Location Service & GPS are disabled. Please enable !", Toast.LENGTH_SHORT).show();
         }
     }
-
+    //permission
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

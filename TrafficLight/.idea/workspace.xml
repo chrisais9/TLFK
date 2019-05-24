@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeee8abc-af76-4cda-a35f-54670d3e5629" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/RetrofitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/RetrofitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/CoordinateActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/CoordinateActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TLFK/app/src/main/java/com/example/tlfk/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TrafficLightAPI/api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="60" column="46" lean-forward="true" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+            <state relative-caret-position="781">
+              <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -171,12 +172,12 @@
       <updated>1558707975177</updated>
       <workItem from="1558707977264" duration="5736000" />
       <workItem from="1558719605977" duration="261000" />
-      <workItem from="1558726973858" duration="3220000" />
+      <workItem from="1558726973858" duration="6136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9783000" />
+    <option name="totallyTimeSpent" value="12699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -291,8 +292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TrafficLightAPI/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="60" column="46" lean-forward="true" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+        <state relative-caret-position="781">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
