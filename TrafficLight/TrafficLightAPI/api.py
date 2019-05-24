@@ -33,7 +33,7 @@ def login(request):
     return JsonResponse({'status': 'Success'})
 
 def find_direction(di):
-    if(0<di<45 or di>315):
+    if(0<=di<45 or di>315):
         return 'N'
     elif(135<di<215):
         return 'S'
