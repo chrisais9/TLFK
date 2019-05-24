@@ -66,6 +66,8 @@ def LightInfo(request):
 
     next_block = BlockList[current_block].go_where(direction)
     
+    start_t=0
+    end_t=0
     for i in CrossWalkList:
         if(i.start_id==current_block and i.end_id == next_block) or (i.start_id==next_block and i.end_id == current_block):
             start_t=i.time_start
