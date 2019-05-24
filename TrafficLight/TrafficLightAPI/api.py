@@ -75,7 +75,7 @@ def LightInfo(request):
             end_t=i.time_end
 
     msg = ""
-    if start_t <= (time%100) <= end_t :
+    if start_t <= (int(time)%100) <= end_t :
         msg="green"
     else:
         msg="red"
