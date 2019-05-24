@@ -56,9 +56,9 @@ def LightInfo(request):
 
     CrossWalkList=[]
     CrossWalkList.append(CrossWalk(0,1,0,25))
-    CrossWalkList.append(CrossWalk(1,2,25,50))
+    CrossWalkList.append(CrossWalk(1,3,25,50))
     CrossWalkList.append(CrossWalk(2,3,50,75))
-    CrossWalkList.append(CrossWalk(3,1,75,100))
+    CrossWalkList.append(CrossWalk(2,0,75,100))
 
     for i,j in enumerate(BlockList):
         if(j.in_block(int(x),int(y))):
