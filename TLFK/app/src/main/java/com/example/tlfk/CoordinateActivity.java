@@ -19,9 +19,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CoordinateActivity {
 
-    private static final int RC_LOCATION = 1;
 
     public void dataRequest(int x, int y, int di, int time){
+        Log.d("aaa","a");
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(RetrofitService.baseURL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -34,19 +34,20 @@ public class CoordinateActivity {
             public void onResponse(Call<LightInfoResponse> call, Response<LightInfoResponse> response) {
                 if (response.isSuccessful()) {
 
-                    // put code(success)
+                    Log.d("msg","success");
                 }
 
                 else {
-                    Toast.makeText(view.getContext(), "실패", Toast.LENGTH_LONG).show();
+                    Log.d("msg","error1");
                 }
             }
 
             @Override
             public void onFailure(Call<LightInfoResponse> call, Throwable t) {
                 t.printStackTrace();
-                Toast.makeText(view.getContext(), "실패", Toast.LENGTH_LONG).show();
+                Log.d("msg","error2");
             }
         });
+
     }
 }

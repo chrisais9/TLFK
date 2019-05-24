@@ -17,6 +17,8 @@ import io.nlopez.smartlocation.SmartLocation;
 import io.nlopez.smartlocation.location.config.LocationParams;
 import io.nlopez.smartlocation.location.utils.LocationState;
 import pub.devrel.easypermissions.EasyPermissions;
+import com.example.tlfk.CoordinateActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         requestLocationPermission();
 
-        // Get loocation
+        // Get location
         getUserLocation();
 
     }
@@ -46,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("Locations long", ""+ location.getLongitude());
 
                     Toast.makeText(MainActivity.this, "Lat : " + location.getLatitude() + " Long : " + location.getLongitude(), Toast.LENGTH_SHORT).show();
-                    dataRequest
+                    int x = (int)location.getLatitude();
+                    int y = (int)location.getLongitude();
+                    Log.d("ddd",""+x);
+                    Log.d("ddd",""+y);
+                    CoordinateActivity coordinateActivity = new CoordinateActivity();
+                    coordinateActivity.dataRequest(x,y,150,30);
                 }
             });
         } else {
