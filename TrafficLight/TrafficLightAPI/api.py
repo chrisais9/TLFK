@@ -61,7 +61,7 @@ def LightInfo(request):
     CrossWalkList.append(CrossWalk(3,1,75,100))
 
     for i,j in enumerate(BlockList):
-        if(j.in_block()):
+        if(j.in_block(int(x),int(y))):
             current_block = i
 
     next_block = BlockList[current_block].go_where(direction)
