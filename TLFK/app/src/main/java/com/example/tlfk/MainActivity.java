@@ -27,14 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Priodic location
-//        SmartLocation.with(this).location().start(new OnLocationUpdatedListener() {
-//            @Override
-//            public void onLocationUpdated(Location location) {
-//                Log.d("Locations lat", ""+ location.getLatitude());
-//                Log.d("Locations long", ""+ location.getLongitude());
-//            }
-//        });
         requestLocationPermission();
 
         // Get loocation
@@ -54,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("Locations long", ""+ location.getLongitude());
 
                     Toast.makeText(MainActivity.this, "Lat : " + location.getLatitude() + " Long : " + location.getLongitude(), Toast.LENGTH_SHORT).show();
+                    dataRequest
                 }
             });
         } else {
